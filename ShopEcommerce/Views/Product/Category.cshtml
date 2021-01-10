@@ -1,6 +1,6 @@
 ﻿@model CPSeed.Models.ProductCategory
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.Name; //Có vấn đề nhỏ ở đây nếu chạy riêng để test, name bị return về null, coi ở trang chủ thì bình thường
     var productCategories = (List<CPSeed.Models.ProductCategory>)ViewBag.ProductCategories;
     var productTags = (List<CPSeed.Models.ProductTag>)ViewBag.Tags;
     var productViewers = (List<CPSeed.Models.ProductViewer>)ViewBag.ProductViewers;

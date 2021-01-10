@@ -21,27 +21,27 @@ namespace CPSeed.Controllers {
             ViewBag.Sliders = db.Banners.Where(x => x.BannerCategory.Name == "Slider").OrderBy(x => x.OrderNo).ToList();
             return View();
         }
+        // Hiện tại không cần dùng đến phần này
+        //public JsonResult SaveRequestProduct(RequestProduct model) {
+        //    model.CreatedDate = DateTime.Now;
+        //    db.RequestProducts.Add(model);
+        //    db.SaveChanges();
+        //    return Json("Sản phẩm yêu cầu của bạn đã được ghi nhận, chúng tôi sẽ liên hệ lại bạn ngay khi có sản phẩm.", JsonRequestBehavior.AllowGet);
+        //}
 
-        public JsonResult SaveRequestProduct(RequestProduct model) {
-            model.CreatedDate = DateTime.Now;
-            db.RequestProducts.Add(model);
-            db.SaveChanges();
-            return Json("Sản phẩm yêu cầu của bạn đã được ghi nhận, chúng tôi sẽ liên hệ lại bạn ngay khi có sản phẩm.", JsonRequestBehavior.AllowGet);
-        }
-
-        public JsonResult SubscribeEmail(string SubscribeEmail) {
-            var check = db.Subscriptions.Any(x => x.Email == SubscribeEmail);
-            if (!check) {
-                Subscription subscription = new Subscription {
-                    Email = SubscribeEmail,
-                    CreatedDate = DateTime.Now
-                };
-                db.Subscriptions.Add(subscription);
-                db.SaveChanges();
-                return Json("Cảm ơn bạn đã đăng ký nhận thông tin khi có sản phẩm mới, chúc bạn 1 ngày làm việc đầy năng lượng.", JsonRequestBehavior.AllowGet);
-            }
-            return Json("Email của bạn đã được đăng ký nhận tin rồi. Chúc bạn 1 ngày làm việc đầy năng lượng.", JsonRequestBehavior.AllowGet);
-        }
+        //public JsonResult SubscribeEmail(string SubscribeEmail) {
+        //    var check = db.Subscriptions.Any(x => x.Email == SubscribeEmail);
+        //    if (!check) {
+        //        Subscription subscription = new Subscription {
+        //            Email = SubscribeEmail,
+        //            CreatedDate = DateTime.Now
+        //        };
+        //        db.Subscriptions.Add(subscription);
+        //        db.SaveChanges();
+        //        return Json("Cảm ơn bạn đã đăng ký nhận thông tin khi có sản phẩm mới, chúc bạn 1 ngày làm việc đầy năng lượng.", JsonRequestBehavior.AllowGet);
+        //    }
+        //    return Json("Email của bạn đã được đăng ký nhận tin rồi. Chúc bạn 1 ngày làm việc đầy năng lượng.", JsonRequestBehavior.AllowGet);
+        //}
 
         protected override void Dispose(bool disposing) {
             if (disposing) {
