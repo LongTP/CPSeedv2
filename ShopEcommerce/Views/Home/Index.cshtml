@@ -16,7 +16,7 @@
             <div class="card-body">
                 <div class="row row-sm">
                     <aside class="col-md-3">
-                        <h5 class="text-uppercase">DANH MỤC</h5>
+                        <h5 class="text-uppercase"><a href="~/Product/">TẤT CẢ SẢN PHẨM</a></h5>
                         <ul class="menu-category">
                             @foreach (var item in productCategories.Where(x => !x.ParentId.HasValue))
                             {
@@ -169,9 +169,9 @@
 </section>
 
 @{ Html.RenderPartial("_LinksPartialView", (List<CPSeed.Models.Vendor>)ViewBag.Vendors);}
-
-@section scripts{
-    @*<link href="~/Assets/plugins/fancybox/fancybox.min.css" type="text/css" rel="stylesheet">
+@* Scipt dư cho phần yêu cầu sản phẩm *@
+@*@section scripts{
+    <link href="~/Assets/plugins/fancybox/fancybox.min.css" type="text/css" rel="stylesheet">
     <script src="~/Assets/plugins/slickslider/slick.min.js"></script>
     <script>
         function SaveRequestProduct() {
@@ -189,5 +189,5 @@
             }
         }
 
-    </script>*@
-}
+    </script>
+}*@

@@ -75,7 +75,7 @@ namespace CPSeed.Models {
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Bạn chưa nhập mật khẩu.")]
-        [StringLength(100, ErrorMessage = "Mật khẩu phải tối đa {0} ký tự và tối thiểu {2} ký tự.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Mật khẩu phải tối thiểu {2} ký tự.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
@@ -106,7 +106,7 @@ namespace CPSeed.Models {
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Bạn chưa nhập mật khẩu.")]
-        [StringLength(100, ErrorMessage = "Mật khẩu phải tối đa {0} ký tự và tối thiểu {2} ký tự.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Mật khẩu phải tối thiểu {2} ký tự.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu")]
         public string Password { get; set; }

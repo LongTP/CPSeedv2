@@ -1,6 +1,6 @@
 ﻿@model CPSeed.Models.ProductCategory
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.Name; //Có vấn đề nhỏ ở đây nếu chạy riêng để test, name bị return về null, coi ở trang chủ thì bình thường
     var productCategories = (List<CPSeed.Models.ProductCategory>)ViewBag.ProductCategories;
     var productTags = (List<CPSeed.Models.ProductTag>)ViewBag.Tags;
     var productViewers = (List<CPSeed.Models.ProductViewer>)ViewBag.ProductViewers;
@@ -80,7 +80,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="card mt-3">
+                @*<div class="card mt-3">
                     <div class="card-header">
                         Thẻ
                     </div>
@@ -89,7 +89,7 @@
                             <a href="~/Tag/@item.Id" class="btn btn-sm btn-success mt-1">@item.Name</a>
                         }
                     </div>
-                </div>
+                </div>*@
             </div>
             <div class="col-md-9 col-sm-12">
                 <div class="row-sm padding-y-sm">
@@ -98,7 +98,7 @@
                             <figure class="card card-product">
                                 <div class="img-wrap">
                                     <img src="@item.Thumnail">
-                                    <a class="btn-overlay" href="javascript:void(0)" onclick="QuickView('@item.Id')"><i class="fa fa-search-plus"></i> Xem nhanh</a>
+                                    @*<a class="btn-overlay" href="javascript:void(0)" onclick="QuickView('@item.Id')"><i class="fa fa-search-plus"></i> Xem nhanh</a>*@
                                 </div>
                                 <figcaption class="info-wrap">
                                     <h6 class="title text-truncate"><a href="~/Product/Details/@item.Id" class="text-dark">@item.Name</a></h6>
