@@ -262,6 +262,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-ShopEcommerce-20190414082020.mdf" />
+    <Content Include="App_Data\aspnet-ShopEcommerce-20190414082020_log.ldf">
+      <DependentUpon>aspnet-ShopEcommerce-20190414082020.mdf</DependentUpon>
+    </Content>
     <Content Include="Areas\Admin\Assets\bootstrap-touchspin\demo\demo.css" />
     <Content Include="Areas\Admin\Assets\bootstrap-touchspin\demo\favicon.ico" />
     <Content Include="Areas\Admin\Assets\bootstrap-touchspin\demo\index-bs3.html" />
@@ -1925,7 +1929,6 @@
     <Content Include="Views\Cart\Finish.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Assets\ckfinder\userfiles\files\" />
     <Folder Include="Areas\Admin\Assets\ckfinder\userfiles\flash\" />
     <Folder Include="Areas\Admin\Views\File\" />
